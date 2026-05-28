@@ -1,0 +1,150 @@
+/* ===================================================
+   FOOTER — EcomendaStore
+   =================================================== */
+
+.site-footer {
+  background: var(--primary);
+  color: rgba(255,255,255,0.85);
+  padding-block: var(--space-12) var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-8);
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+}
+
+.footer-brand { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--surface);
+  letter-spacing: -0.02em;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+  max-width: 36ch;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.10);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.80);
+  transition: background 0.2s ease, color 0.2s ease;
+  opacity: 1;
+}
+
+.footer-social a:hover {
+  background: var(--secondary);
+  color: #fff;
+  opacity: 1;
+}
+
+.footer-col { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.footer-col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--secondary-container);
+  font-family: var(--font-body);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col ul li a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s ease;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.footer-col ul li a:hover {
+  color: var(--secondary-container);
+  opacity: 1;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.footer-contact-item svg { flex-shrink: 0; color: var(--secondary); }
+
+/* Footer bottom */
+.footer-bottom {
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer-legal a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+  opacity: 1;
+}
+
+.footer-legal a:hover {
+  color: var(--secondary-container);
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <!-- ① CONSENT MODE v2 — DEBE IR ANTES DEL SNIPPET GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage':         'denied',
+      'analytics_storage':  'denied',
+      'ad_user_data':       'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update':    500
+    });
+  </script>
+
+  <!-- ② GOOGLE TAG MANAGER — reemplaza GTM-XXXXXXX con tu ID real -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">
+  {% else %}<meta name="robots" content="index, follow">{% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | relative_url | prepend: site.url }}{% endif %}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url | prepend: site.url }}">
+  <meta name="language" content="es-CO">
+  <meta name="author" content="{{ site.name }}">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title"       content="{{ page.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url"         content="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | relative_url | prepend: site.url }}{% endif %}">
+  <meta property="og:type"        content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:locale"      content="es_CO">
+  <meta property="og:site_name"   content="{{ site.title }}">
+  {% if page.hero %}<meta property="og:image" content="{{ site.url }}/img/{{ page.hero }}">
+  {% else %}<meta property="og:image" content="{{ site.url }}/img/crema-con-urea-al-40-protepiel.avif">{% endif %}
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{{ page.title }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.hero %}<meta name="twitter:image" content="{{ site.url }}/img/{{ page.hero }}">
+  {% else %}<meta name="twitter:image" content="{{ site.url }}/img/crema-con-urea-al-40-protepiel.avif">{% endif %}
+
+  <!-- PWA -->
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+  <meta name="theme-color" content="#1a4a35">
+  <link rel="shortcut icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <!-- DNS PREFETCH -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- PRELOAD hero -->
+  {% if page.hero %}
+  <link rel="preload" as="image" href="{{ page.hero | prepend: '/img/' | relative_url }}" type="image/avif">
+  {% endif %}
+
+  <!-- SCHEMA: Organización global -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
+    "name": "Protepiel",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/img/crema-con-urea-al-40-protepiel.avif",
+    "description": "{{ site.description }}",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+57-316-569-5773",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "{{ site.instagram }}",
+      "{{ site.facebook }}"
+    ]
+  }
+  </script>
+
+  <!-- SCHEMA: Producto en páginas de producto -->
+  {% if page.schema_type == 'product' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Crema con Urea al 40%",
+    "description": "{{ page.description | strip_html | strip_newlines }}",
+    "image": "{{ site.url }}/img/crema-urea-40-hidratacion-intensiva-piel-seca.avif",
+    "brand": { "@type": "Brand", "name": "Protepiel" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "COP",
+      "price": "69990",
+      "availability": "https://schema.org/InStock",
+      "url": "{{ site.url }}/crema-urea-40/",
+      "seller": { "@id": "{{ site.url }}/#organization" }
+    }
+  }
+  </script>
+  {% endif %}
+
+  <!-- SCHEMA: BlogPosting -->
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title | xml_escape }}",
+    "description": "{{ page.description | strip_html | strip_newlines | xml_escape }}",
+    "image": "{{ site.url }}/img/{{ page.hero | default: 'crema-con-urea-al-40-protepiel.avif' }}",
+    "url": "{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.url }}{% endif %}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "author": { "@type": "Organization", "@id": "{{ site.url }}/#organization" },
+    "publisher": { "@id": "{{ site.url }}/#organization" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
+  }
+  </script>
+  {% endif %}
+
+  <!-- SCHEMA: FAQPage -->
+  {% if page.faqs %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for faq in page.faqs %}
+      {
+        "@type": "Question",
+        "name": {{ faq.question | jsonify }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ faq.answer | strip_html | strip_newlines | jsonify }} }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- SCHEMA: BreadcrumbList -->
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "{{ page.title | xml_escape }}", "item": "{{ site.url }}{{ page.url }}" }
+    ]
+  }
+  </script>
+  {% elsif page.schema_type == 'product' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "{{ page.title | xml_escape }}", "item": "{{ site.url }}{{ page.url }}" }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- CRITICAL CSS (inlined) -->
+  <style>
+    {% include css/critical.css %}
+    {% include css/nav.css %}
+  </style>
+
+  <!-- Fuentes: Playfair Display + Inter -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+  <!-- Non-critical CSS (async) -->
+  <link rel="preload" href="{{ 'css/style.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}"></noscript>
+</head>

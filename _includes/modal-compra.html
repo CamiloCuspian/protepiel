@@ -1,0 +1,120 @@
+<!-- Modal de compra — Protepiel -->
+<div class="modal-overlay" id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="modal-close" id="modal-cerrar" aria-label="Cerrar formulario de compra">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Formulario de compra -->
+    <div id="modal-form-wrap">
+      <h2 class="modal-title" id="modal-title">Completa tu pedido</h2>
+
+      <!-- Selector de cantidad -->
+      <div class="qty-selector">
+        <label for="qty-input" class="qty-selector__label">¿Cuántas unidades quieres?</label>
+        <div class="qty-controls">
+          <button class="qty-btn" id="qty-menos" aria-label="Reducir cantidad" type="button">−</button>
+          <input
+            type="number"
+            id="qty-input"
+            class="qty-input"
+            value="1"
+            min="1"
+            max="20"
+            aria-label="Cantidad de unidades"
+            readonly
+          >
+          <button class="qty-btn" id="qty-mas" aria-label="Aumentar cantidad" type="button">+</button>
+        </div>
+      </div>
+
+      <!-- Resumen de precio -->
+      <div class="precio-resumen" role="status" aria-live="polite" aria-label="Resumen del precio">
+        <div class="precio-row">
+          <span>Precio unitario</span>
+          <span id="precio-unitario">$69.990</span>
+        </div>
+        <div class="precio-row" id="fila-descuento" style="display:none">
+          <span>Descuento</span>
+          <span id="descuento-porcentaje" class="descuento-badge">0%</span>
+        </div>
+        <div class="precio-row">
+          <span>Cantidad</span>
+          <span id="resumen-cantidad">1 unidad</span>
+        </div>
+        <div class="precio-row precio-row--total">
+          <span>Total</span>
+          <span id="precio-total">$69.990</span>
+        </div>
+        <div class="precio-row" style="font-size:0.8rem;color:var(--primary);margin-top:var(--space-1)">
+          <span>🚚 Envío GRATIS</span>
+          <span>Pago contra entrega</span>
+        </div>
+      </div>
+
+      <!-- Formulario de datos -->
+      <form class="modal-form" id="form-pedido" novalidate>
+        <input type="hidden" id="f-producto" name="producto" value="Crema Urea 40%">
+        <input type="hidden" id="f-cantidad" name="cantidad" value="1">
+        <input type="hidden" id="f-precio-unit" name="precio_unitario" value="69990">
+        <input type="hidden" id="f-descuento" name="descuento" value="0">
+        <input type="hidden" id="f-total" name="total" value="69990">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-nombre">Nombre completo <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="f-telefono">Teléfono / WhatsApp <span aria-hidden="true">*</span></label>
+            <input type="tel" id="f-telefono" name="telefono" placeholder="3XX XXX XXXX" required autocomplete="tel" aria-required="true">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-email">Correo electrónico <span aria-hidden="true">*</span></label>
+          <input type="email" id="f-email" name="email" placeholder="tu@correo.com" required autocomplete="email" aria-required="true">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-ciudad">Ciudad <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-ciudad" name="ciudad" placeholder="Bogotá, Medellín…" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="f-departamento">Departamento</label>
+            <input type="text" id="f-departamento" name="departamento" placeholder="Cundinamarca…" autocomplete="address-level1">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-direccion">Dirección de envío <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-direccion" name="direccion" placeholder="Calle, barrio, apto…" required autocomplete="street-address" aria-required="true">
+        </div>
+
+        <button type="submit" class="boton boton_cta modal-submit" id="btn-confirmar">
+          ✅ Confirmar pedido por WhatsApp
+        </button>
+
+        <p class="modal-disclaimer">
+          🚚 <strong>Envío GRATIS</strong> a toda Colombia · <strong>Pago contra entrega</strong> al recibir tu pedido.<br>
+          Al enviar, serás redirigido a WhatsApp para confirmar. Tus datos se guardan de forma segura.
+        </p>
+      </form>
+    </div>
+
+    <!-- Estado de éxito -->
+    <div class="modal-success" id="modal-exito" role="status" aria-live="polite">
+      <div class="modal-success__icon" aria-hidden="true">
+        <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h3 style="font-family:var(--font-display);font-style:italic;color:var(--primary)">¡Pedido registrado!</h3>
+      <p style="text-align:center;max-width:36ch">Abriendo WhatsApp para confirmar tu pedido. Si no se abre automáticamente, escríbenos al <strong>316 569 5773</strong>.</p>
+    </div>
+
+  </div>
+</div>

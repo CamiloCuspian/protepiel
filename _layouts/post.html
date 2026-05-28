@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+  <header class="post-header wrapper">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="{{ '/' | relative_url }}">Inicio</a>
+      <span class="separator" aria-hidden="true">›</span>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <span class="separator" aria-hidden="true">›</span>
+      <span>{{ page.category | capitalize }}</span>
+    </nav>
+
+    <div class="post-meta-bar">
+      <span class="badge badge--green">{{ page.category | capitalize }}</span>
+      <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d de %B, %Y" }}
+      </time>
+      <span>·</span>
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">Protepiel</span>
+      </span>
+    </div>
+
+    <h1 itemprop="headline">{{ page.h1 | default: page.title }}</h1>
+    {% if page.intro %}<p class="hero-home__lead">{{ page.intro }}</p>{% endif %}
+  </header>
+
+  {% if page.hero %}
+  <div class="wrapper" style="padding-top:0">
+    <img
+      src="{{ page.hero | prepend: '/img/' | relative_url }}"
+      alt="{{ page.alt | default: page.title }}"
+      class="post-hero-img"
+      width="1200" height="525"
+      loading="eager" fetchpriority="high"
+      itemprop="image"
+    >
+  </div>
+  {% endif %}
+
+  <div class="wrapper flow post-content" itemprop="articleBody">
+    {{ content }}
+
+    <nav class="post-nav" aria-label="Artículos relacionados">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" rel="prev">
+        <span class="post-nav__label">← Anterior</span>
+        <span class="post-nav__title">{{ page.previous.title | truncate: 55 }}</span>
+      </a>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" rel="next" style="text-align:right">
+        <span class="post-nav__label">Siguiente →</span>
+        <span class="post-nav__title">{{ page.next.title | truncate: 55 }}</span>
+      </a>
+      {% endif %}
+    </nav>
+  </div>
+
+  <!-- CTA al final del artículo -->
+  <section class="wrapper seccion-completa seccion-completa--principal">
+    <div class="cta-final">
+      <p class="label-organic" style="color:var(--secondary-container)">Producto recomendado</p>
+      <h2 class="cta-final__title">¿Lista para hidratar tu piel?</h2>
+      <p class="cta-final__sub">Crema Urea 40% — Resultados visibles desde la primera semana.<br><strong style="color:var(--secondary-container)">Envío GRATIS a toda Colombia · Pago contra entrega.</strong></p>
+      <button class="boton boton_cta abrir-modal" aria-label="Comprar Crema Urea 40% ahora" data-producto="Crema Urea 40%">
+        Comprar ahora — $69.990 COP
+      </button>
+    </div>
+  </section>
+
+</article>

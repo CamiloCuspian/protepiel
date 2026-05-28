@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /robots.txt
+---
+User-agent: *
+Allow: /
+
+Disallow: /css/
+Disallow: /js/
+Disallow: /.jekyll-cache/
+
+Sitemap: {{ site.url }}/sitemap.xml

@@ -1,0 +1,234 @@
+/* ===================================================
+   DESIGN SYSTEM — EcomendaStore
+   Organic · Soft UI · Bento · Editorial Luxury
+   =================================================== */
+
+:root {
+  /* === SUPERFICIES — capas de crema orgánica === */
+  --surface:           #faf8f4;
+  --surface-low:       #f4f0ea;
+  --surface-container: #ede8df;
+  --surface-highest:   #e0d9ce;
+
+  /* === PRIMARIO: Forest Green === */
+  --primary:           #1a4a35;
+  --primary-mid:       #206040;
+  --primary-gradient:  linear-gradient(135deg, #0d2b1f, #1a4a35);
+  --on-primary:        #ffffff;
+
+  /* === SECUNDARIO: Teal (del producto) === */
+  --secondary:         #1a9e8a;
+  --secondary-container: #d4f0eb;
+  --on-secondary:      #ffffff;
+
+  /* === ACENTO: Warm Sand === */
+  --accent:            #c4934a;
+  --accent-container:  #f5e8cc;
+
+  /* === TEXTO === */
+  --on-surface:        #1c1f1a;
+  --on-surface-variant:#3d4238;
+  --outline-variant:   rgba(26,74,53,0.12);
+
+  /* === TIPOGRAFÍA === */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
+
+  /* === ESPACIADO (escala 8px) === */
+  --space-1:  0.5rem;
+  --space-2:  1rem;
+  --space-3:  1.5rem;
+  --space-4:  2rem;
+  --space-6:  3rem;
+  --space-8:  4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* === RADIOS — más redondeados para look orgánico === */
+  --radius-sm:   0.5rem;
+  --radius-md:   0.875rem;
+  --radius-lg:   1.25rem;
+  --radius-xl:   2rem;
+  --radius-full: 100px;
+
+  /* === SOMBRAS — suaves y naturales === */
+  --shadow-ambient: 0 2px 24px rgba(26,74,53,0.07);
+  --shadow-float:   0 8px 40px rgba(26,74,53,0.11);
+  --shadow-deep:    0 20px 60px rgba(26,74,53,0.15);
+  --shadow-inset:   inset 0 2px 8px rgba(26,74,53,0.06);
+
+  /* === ALIASES de compatibilidad === */
+  --principal:    var(--primary);
+  --accion:       var(--secondary);
+  --secundario:   var(--secondary);
+  --blanco:       var(--surface);
+  --colorTexto:   var(--on-surface);
+  --radius:       var(--radius-lg);
+  --transition:   all 0.3s ease;
+  --shadow:       var(--shadow-ambient);
+  --shadow-hover: var(--shadow-float);
+}
+
+/* ===== RESET ===== */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.65;
+  font-family: var(--font-body);
+  font-size: 16px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* ===== TIPOGRAFÍA CRÍTICA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  color: var(--on-surface);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 2rem + 2.8vw, 5rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 1.5rem + 1.8vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 28ch;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-family: var(--font-body);
+  color: var(--on-surface-variant);
+}
+
+p {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--on-surface-variant);
+  max-width: 65ch;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+a:hover:not(.boton):not(.logo) { opacity: 0.75; }
+
+/* ===== LAYOUT CRÍTICO ===== */
+.wrapper {
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+  padding-block: var(--space-12) var(--space-8);
+  container-type: inline-size;
+}
+
+/* ===== BOTONES ===== */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875em 1.75em;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  max-width: max-content;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+}
+
+/* Primario: gradiente forest green */
+.boton_1 {
+  background: var(--primary-gradient);
+  color: var(--on-primary);
+  box-shadow: var(--shadow-float);
+}
+.boton_1:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-deep);
+}
+
+/* Secundario: outline teal */
+.boton_2 {
+  border: 2px solid var(--secondary);
+  background: transparent;
+  color: var(--secondary);
+}
+.boton_2:hover {
+  background: var(--secondary-container);
+  transform: translateY(-2px);
+}
+
+/* CTA principal — teal sólido */
+.boton_cta {
+  background: var(--secondary);
+  color: var(--on-secondary);
+  box-shadow: 0 6px 32px rgba(26,158,138,0.30);
+}
+.boton_cta:hover {
+  background: #17897a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(26,158,138,0.38);
+}
+
+.boton:active { transform: translateY(0); }
+
+/* Botones en fondos oscuros */
+.seccion-completa--principal .boton_2,
+.header-hero .boton_2 {
+  border-color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.92);
+}
+.seccion-completa--principal .boton_2:hover,
+.header-hero .boton_2:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE CRÍTICO ===== */
+@media (max-width: 768px) {
+  .wrapper { padding-block: var(--space-8) var(--space-6); }
+  h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+}

@@ -1,0 +1,18 @@
+# Carpeta de planes y keywords (no subir al repo)
+plans/
+
+# Jekyll build
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales y privados
+*.csv
+"WhatsApp Image*"
+SETUP.md
+Gemfile.lock

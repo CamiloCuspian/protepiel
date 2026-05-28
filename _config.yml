@@ -1,0 +1,48 @@
+baseurl: ""
+url: "https://protepiel.com"
+title: "Protepiel — Crema Urea 40% Colombia"
+name: "Protepiel"
+author: "Protepiel"
+description: "Crema con urea al 40% para piel seca, dermatitis y grietas. Envío GRATIS a toda Colombia. Pago contra entrega. Resultados visibles desde la primera semana."
+whatsapp_numero: "573165695773"
+whatsapp: "https://wa.me/573165695773"
+instagram: "https://www.instagram.com/protepiel"
+facebook: "https://www.facebook.com/protepiel"
+email: "hola@protepiel.com"
+
+# Producto principal
+producto_nombre: "Crema Urea 40%"
+producto_precio: 69990
+producto_url: "/crema-urea-40/"
+
+markdown: kramdown
+permalink: /:slug/
+
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+  envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+collections:
+  posts:
+    output: true
+    permalink: "/blog/:slug/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - "Keyword Stats 2026-05-23 at 13_50_58.csv"
+  - exported_data.csv
+  - "WhatsApp Image*"
+  - SETUP.md
+  - plans/

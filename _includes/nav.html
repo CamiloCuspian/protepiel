@@ -1,0 +1,56 @@
+<!-- _includes/nav.html -->
+<header class="header-nav" role="banner">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="logo-section">
+      <a href="{{ '/' | relative_url }}" class="logo" aria-label="Protepiel — Ir a inicio">
+        <div>
+          <div class="logo-name">Protepiel</div>
+          <div class="logo-tagline">Piel sana · Natural</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop nav -->
+    <nav role="navigation" aria-label="Navegación principal" id="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Inicio</a></li>
+        <li><a href="{{ '/crema-urea-40/' | relative_url }}" {% if page.url contains 'crema-urea' %}aria-current="page"{% endif %}>Producto</a></li>
+        <li><a href="{{ '/sobre-nosotros/' | relative_url }}" {% if page.url contains 'sobre' %}aria-current="page"{% endif %}>Nosotros</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains 'blog' %}aria-current="page"{% endif %}>Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- CTA -->
+    <div class="nav-cta">
+      <button class="boton boton_cta abrir-modal"
+              aria-label="Comprar Crema Urea 40%"
+              data-producto="Crema Urea 40%">
+        Comprar — $69.990
+      </button>
+    </div>
+
+    <!-- Hamburger móvil -->
+    <button class="mobile-menu-toggle"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Menú móvil" role="navigation">
+    <a href="{{ '/' | relative_url }}">Inicio</a>
+    <a href="{{ '/crema-urea-40/' | relative_url }}">Producto — Crema Urea 40%</a>
+    <a href="{{ '/sobre-nosotros/' | relative_url }}">Sobre Nosotros</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    <button class="boton boton_cta abrir-modal" style="margin-top:0.5rem;width:100%;justify-content:center"
+            data-producto="Crema Urea 40%"
+            aria-label="Comprar Crema Urea 40% ahora">
+      🛒 Comprar ahora — $69.990
+    </button>
+  </nav>
+</header>
