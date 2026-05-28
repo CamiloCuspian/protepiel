@@ -35,7 +35,6 @@ collections:
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
 
 exclude:
   - Gemfile
