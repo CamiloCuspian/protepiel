@@ -11,7 +11,7 @@
      ========================================================= */
   const CONFIG = {
     PRECIO_BASE:    69990,       // COP
-    WA_NUMERO:      '573165695773',
+    WA_NUMERO:      '573222579797',
     // Pega aquí la URL del Apps Script después de desplegarlo:
     SHEETS_URL:     'https://script.google.com/macros/s/AKfycbzL6tLzkrQC1DdxJINdCoh5MfcIuCWQO0DRGqnK2d-i5dX8PDcCJmHFQxPMktdeWrGN/exec',
     DESCUENTOS: [
