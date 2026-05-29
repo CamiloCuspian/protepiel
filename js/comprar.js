@@ -88,12 +88,26 @@
   }
 
   /* =========================================================
+     ANALYTICS — helper
+     ========================================================= */
+  function pushEvent(eventName, params) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: eventName, ...params });
+  }
+
+  /* =========================================================
      ABRIR / CERRAR MODAL
      ========================================================= */
-  function abrirModal() {
+  function abrirModal(source) {
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    // Evento GA4: apertura de formulario de compra
+    pushEvent('form_open', {
+      form_name: 'modal_compra',
+      form_source: source || 'unknown',
+      page_path: window.location.pathname,
+    });
     // Focus al primer campo
     setTimeout(() => {
       const primerCampo = form?.querySelector('input:not([type=hidden])');
@@ -109,12 +123,15 @@
 
   // Botones "Comprar" / "abrir-modal"
   document.addEventListener('click', (e) => {
-    if (e.target.closest('.abrir-modal')) {
+    const btn = e.target.closest('.abrir-modal');
+    if (btn) {
       e.preventDefault();
       formWrap.style.display = '';
       modalExito.classList.remove('is-visible');
       actualizarPrecio();
-      abrirModal();
+      // Pasa el texto del botón como fuente para saber desde qué CTA se abrió
+      const source = btn.dataset.source || btn.textContent.trim().slice(0, 40) || 'cta';
+      abrirModal(source);
     }
   });
 
@@ -235,6 +252,16 @@
     // Mostrar estado de éxito
     formWrap.style.display = 'none';
     modalExito.classList.add('is-visible');
+
+    // Evento GA4: pedido completado → abre WhatsApp
+    pushEvent('whatsapp_click', {
+      click_source: 'form_submit',
+      product: datos.producto,
+      quantity: parseInt(datos.cantidad, 10),
+      value: parseFloat(datos.total),
+      currency: 'COP',
+      page_path: window.location.pathname,
+    });
 
     // Abrir WhatsApp después de 800ms
     setTimeout(() => {
