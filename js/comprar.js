@@ -1,5 +1,5 @@
 /**
- * comprar.js — Sistema de compra EcomendaStore
+ * comprar.js — Sistema de compra Protepiel
  * Lógica: modal · descuentos · Google Sheets · WhatsApp
  */
 
@@ -213,7 +213,7 @@
       : '';
 
     const mensaje = [
-      `🛒 *NUEVO PEDIDO — EcomendaStore*`,
+      `🛒 *NUEVO PEDIDO — Protepiel*`,
       `━━━━━━━━━━━━━━━━━━━━`,
       `📦 Producto: *${datos.producto}*`,
       `🔢 Cantidad: *${datos.cantidad} unidad${datos.cantidad > 1 ? 'es' : ''}*`,
@@ -243,3 +243,4 @@
   });
 
 })();
+        
