@@ -72,3 +72,9 @@ La oclusión con las medias aumenta la penetración de la urea hasta un 40% más
 ## Precauciones
 
 La urea al 40% está contraindicada en piel con heridas abiertas, piel infectada o con eccema activo. Si tienes piel muy irritada, espera a que se calme antes de aplicar. En bebés y niños pequeños, consulta al pediatra antes de usar concentraciones altas.
+
+## Artículos relacionados
+
+- [Cómo Usar la Crema Urea al 40%: Guía Paso a Paso](/blog/como-usar-crema-urea-40/) — frecuencia, técnica y qué esperar semana a semana
+- [Urea para Piel Seca y Grietas: Guía Completa](/blog/urea-piel-seca-grietas/) — tratamiento de grietas en talones con el protocolo nocturno
+- [Ver Crema Urea 40% de Protepiel](/crema-urea-40/) — con envío gratis y pago contra entrega a toda Colombia

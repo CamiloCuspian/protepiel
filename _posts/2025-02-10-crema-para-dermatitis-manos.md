@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Crema para Dermatitis en las Manos: Qué Funciona de Verdad"
-description: "Descubre qué crema para dermatitis en las manos realmente funciona. Guía completa sobre urea, ingredientes activos y rutina de cuidado para piel atópica en Colombia."
-h1: "Crema para Dermatitis en las Manos: La Guía Completa"
-intro: "No todas las cremas para dermatitis son iguales. En esta guía te explicamos qué ingredientes buscar y por qué la urea al 40% marca la diferencia."
+title: "¿Qué Crema Usar para la Dermatitis en las Manos? Urea al 40%"
+description: "¿Qué crema es buena para la dermatitis en las manos? La respuesta es urea al 40%. Descubre por qué funciona, cómo aplicarla y consíguela con envío gratis en Colombia."
+h1: "¿Qué Crema Usar para la Dermatitis en las Manos?"
+intro: "Millones de colombianos buscan alivio para la dermatitis en manos. La ciencia tiene una respuesta clara: urea al 40% con ácido salicílico. Aquí te explicamos por qué funciona y cómo usarla."
 category: dermatitis
-hero: crema-urea-40-antes-despues-manos-dermatitis.avif
-alt: "Crema para dermatitis en las manos — antes y después con crema urea 40%"
+hero: crema-urea-40-beneficios-acne-manos-pies.webp
+alt: "Crema urea al 40% para dermatitis en manos — hidratación profunda y reparación de piel seca"
 permalink: /blog/crema-para-dermatitis-manos/
 canonical: https://protepiel.com/blog/crema-para-dermatitis-manos/
-date: 2025-02-10
+date: 2026-06-11
 ---
 
 La dermatitis en las manos es una de las condiciones más incómodas y persistentes que afectan a millones de colombianos. La piel se reseca, se agrieta, duele y en muchos casos no responde a las cremas comunes del mercado.
@@ -52,10 +52,46 @@ La constancia es tan importante como el producto. Esta rutina ha dado resultados
 
 **Resultado esperado:** mejora visible en 5 a 7 días, transformación completa en 2 a 4 semanas según la severidad.
 
+## ¿Qué concentración de urea necesito para la dermatitis?
+
+No todas las cremas con urea son iguales. La concentración define el efecto:
+
+- **Urea 5–10%**: hidratación suave, ideal para piel normal seca
+- **Urea 20–25%**: acción moderada en piel seca severa
+- **Urea 40%**: acción queratolítica intensa — la indicada para dermatitis, callosidades y piel engrosada
+
+Para dermatitis en manos con piel agrietada o descamada, la concentración al 40% es la que produce resultados visibles. Concentraciones menores alivian temporalmente pero no atacan el problema de fondo.
+
+## ¿Qué zonas de las manos trata mejor la urea al 40%?
+
+La crema urea 40% actúa con especial eficacia en:
+
+- **Nudillos y dorso de la mano** — donde la piel es más delgada y se agrieta con el frío o la resequedad
+- **Yemas de los dedos** — zonas de alta fricción que acumulan piel muerta
+- **Palmas** — cuando hay engrosamiento o dermatitis de contacto por trabajo manual
+- **Bordes de los dedos** — frecuentemente afectados por dermatitis eccematosa
+
 ## ¿Cuándo ver al dermatólogo?
 
 Si después de 4 semanas de uso consistente no hay mejoría, o si tienes signos de infección (pus, fiebre, enrojecimiento extenso), consulta con un dermatólogo. La crema trata la dermatitis leve a moderada; los casos severos pueden requerir tratamiento médico adicional.
 
+## Preguntas frecuentes
+
+**¿Puedo usar crema de urea todos los días?**
+Sí. La urea al 40% está formulada para uso diario en las zonas afectadas. La constancia es clave para mantener la piel hidratada y evitar recaídas.
+
+**¿Duele aplicar urea al 40% en piel con dermatitis activa?**
+En piel muy irritada o con heridas abiertas puede producir una sensación de ardor leve al inicio. Aplica una capa fina y deja absorber. Si el ardor persiste más de 2 minutos, enjuaga y consulta a tu dermatólogo.
+
+**¿La crema urea 40% aclara la piel de las manos?**
+La urea elimina células muertas y mejora la textura, lo que puede dar un aspecto más uniforme. No es un despigmentante, pero al reparar la barrera cutánea la piel luce más saludable.
+
 ---
 
-*¿Quieres probar la Crema Urea 40% de Protepiel? Envío GRATIS a toda Colombia, pago contra entrega. [Compra aquí](/crema-urea-40/).*
+**¿Lista para decirle adiós a la dermatitis?** La Crema Urea 40% de Protepiel tiene envío GRATIS a toda Colombia con pago contra entrega. [Compra aquí](/crema-urea-40/).
+
+## Artículos relacionados
+
+- [Dermatitis en las Manos: Qué Crema Usar y Por Qué Funciona](/blog/dermatitis-manos-que-crema-usar/) — análisis profundo de las causas y la ciencia detrás de la urea al 40%
+- [Cómo Usar la Crema Urea al 40%: Guía Paso a Paso](/blog/como-usar-crema-urea-40/) — zonas de aplicación, frecuencia y qué esperar semana a semana
+- [Urea para Piel Seca y Grietas: Guía Completa](/blog/urea-piel-seca-grietas/) — del protocolo nocturno a la comparativa de concentraciones

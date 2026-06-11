@@ -62,3 +62,9 @@ Sí, cuando se usa correctamente. Algunas consideraciones:
 ---
 
 *La Crema Urea 40% de Protepiel incluye ácido salicílico para potenciar la acción queratolítica. Envío gratis a toda Colombia, pago contra entrega. [Ver producto](/crema-urea-40/).*
+
+## Artículos relacionados
+
+- [Dermatitis en las Manos: Qué Crema Usar y Por Qué Funciona](/blog/dermatitis-manos-que-crema-usar/) — por qué las cremas comunes fallan y qué concentración de urea necesitas
+- [Urea al 40% para Pies: Callos, Grietas y Talones Agrietados](/blog/urea-40-pies-callos-grietas/) — protocolo nocturno para grietas profundas y callosidades
+- [Cómo Usar la Crema Urea al 40%](/blog/como-usar-crema-urea-40/) — guía paso a paso con frecuencia y técnica correcta
