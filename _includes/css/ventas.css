@@ -1,0 +1,225 @@
+/* ===================================================
+   VENTAS — Componentes de conversión y confianza
+   Reutiliza variables y patrones del design system
+   =================================================== */
+
+/* ===== STRIP DE GARANTÍAS / SEGURIDAD ===== */
+.garantias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.garantia {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-ambient);
+}
+
+.garantia__icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: var(--secondary-container);
+  color: var(--primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.garantia__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-body);
+  line-height: 1.25;
+}
+
+.garantia__text {
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  line-height: 1.45;
+  max-width: unset;
+  margin-top: 0.15rem;
+}
+
+/* ===== SECCIÓN DE URGENCIA (honesta + contador real opcional) ===== */
+.urgencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  text-align: center;
+  background: var(--accent-container);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-4);
+}
+
+.urgencia__msg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.urgencia__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-body);
+}
+
+.urgencia__sub {
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  max-width: 48ch;
+}
+
+/* Contador regresivo — solo se muestra si hay promo real con fecha */
+.cuenta-regresiva {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cuenta-regresiva__caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.2rem;
+  padding: 0.5rem 0.4rem;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: var(--radius-md);
+}
+
+.cuenta-regresiva__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.cuenta-regresiva__lbl {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  margin-top: 0.2rem;
+}
+
+/* ===== RESPUESTA RÁPIDA (featured snippet / AI Overview) ===== */
+.respuesta-rapida {
+  background: var(--surface);
+  border-left: 4px solid var(--secondary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--space-4) var(--space-4);
+  box-shadow: var(--shadow-ambient);
+  margin-block: var(--space-4);
+}
+
+.respuesta-rapida__q {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.respuesta-rapida__a {
+  font-size: 0.98rem;
+  color: var(--on-surface-variant);
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+.respuesta-rapida__a strong { color: var(--on-surface); }
+
+/* ===== PASOS DE COMPRA (facilidad / confianza) ===== */
+.pasos-compra {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  counter-reset: paso;
+}
+
+.paso {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  box-shadow: var(--shadow-ambient);
+}
+
+.paso::before {
+  counter-increment: paso;
+  content: counter(paso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: var(--space-2);
+  background: var(--primary-gradient);
+  color: var(--on-primary);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+.paso__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-body);
+  margin-bottom: 0.35rem;
+}
+
+.paso__text {
+  font-size: 0.88rem;
+  color: var(--on-surface-variant);
+  line-height: 1.55;
+  max-width: unset;
+}
+
+/* ===== CTA dual (Comprar + WhatsApp) ===== */
+.cta-dual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.boton_whatsapp {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(37,211,102,0.30);
+}
+.boton_whatsapp:hover {
+  background: #1ebe5b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .garantias { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .garantias,
+  .pasos-compra { grid-template-columns: 1fr; }
+  .urgencia { flex-direction: column; }
+}

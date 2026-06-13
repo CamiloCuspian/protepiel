@@ -4,7 +4,7 @@
 
 /* ===== HEADER PRODUCTO ===== */
 .header-producto {
-  padding-top: 5.5rem;
+  padding-top: var(--top-clear);
   padding-bottom: 0;
   background: var(--surface-low);
   box-shadow: 0 0 0 100vmax var(--surface-low);

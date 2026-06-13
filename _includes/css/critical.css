@@ -57,6 +57,12 @@
   --shadow-deep:    0 20px 60px rgba(26,74,53,0.15);
   --shadow-inset:   inset 0 2px 8px rgba(26,74,53,0.06);
 
+  /* === ALTURAS DE LAYOUT (anuncio + nav fijos) === */
+  --anuncio-h:    2.25rem;   /* barra de anuncio superior */
+  --nav-h:        68px;      /* nav */
+  --top-clear:    7rem;      /* despeje para primera sección bajo el header fijo */
+  --buybar-h:     4.25rem;   /* barra de compra fija móvil */
+
   /* === ALIASES de compatibilidad === */
   --principal:    var(--primary);
   --accion:       var(--secondary);
@@ -81,7 +87,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: var(--top-clear);
   overflow-x: hidden;
 }
 
@@ -227,8 +233,45 @@ a:hover:not(.boton):not(.logo) { opacity: 0.75; }
   color: #fff;
 }
 
+/* ===== ACCESIBILIDAD ===== */
+/* Texto solo para lectores de pantalla (global) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Foco visible y consistente para teclado */
+:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.boton:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
 /* ===== RESPONSIVE CRÍTICO ===== */
 @media (max-width: 768px) {
   .wrapper { padding-block: var(--space-8) var(--space-6); }
   h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+  :root { --top-clear: 6.5rem; --anuncio-h: 2.1rem; }
+}
+
+/* Respeto a usuarios que reducen movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

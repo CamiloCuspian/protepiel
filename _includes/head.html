@@ -108,13 +108,41 @@
     "description": "{{ page.description | strip_html | strip_newlines }}",
     "image": "{{ site.url }}/img/crema-urea-40-hidratacion-intensiva-piel-seca.avif",
     "brand": { "@type": "Brand", "name": "Protepiel" },
+    "category": "Cuidado de la piel",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "offers": {
       "@type": "Offer",
       "priceCurrency": "COP",
       "price": "69990",
+      "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
       "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
       "url": "{{ site.url }}/crema-urea-40/",
-      "seller": { "@id": "{{ site.url }}/#organization" }
+      "seller": { "@id": "{{ site.url }}/#organization" },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "COP" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CO" },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+          "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "CO",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     }
   }
   </script>

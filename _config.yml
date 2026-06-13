@@ -15,6 +15,11 @@ producto_nombre: "Crema Urea 40%"
 producto_precio: 69990
 producto_url: "/crema-urea-40/"
 
+# Promoción con cuenta regresiva (OPCIONAL).
+# Descomenta y pon una fecha/hora REAL de fin para activar el contador honesto.
+# Si está vacío, la sección de urgencia se muestra sin temporizador.
+# promo_fin: "2026-06-30T23:59:59-05:00"
+
 markdown: kramdown
 permalink: /:slug/
 

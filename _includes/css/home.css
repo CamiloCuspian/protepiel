@@ -5,7 +5,7 @@
 
 /* ===== HERO EDITORIAL ===== */
 .hero-home {
-  padding-top: 6rem;
+  padding-top: var(--top-clear);
   padding-bottom: 0;
   background: var(--surface-low);
   box-shadow: 0 0 0 100vmax var(--surface-low);

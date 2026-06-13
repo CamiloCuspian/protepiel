@@ -5,6 +5,17 @@ description: "Crema con urea al 40% y ácido salicílico para piel seca, dermati
 h1: "Piel suave e hidratada"
 noheader: true
 hero: crema-urea-40-hidratacion-intensiva-piel-seca.avif
+faqs:
+  - question: "¿El envío es realmente gratis en toda Colombia?"
+    answer: "Sí. El envío es 100% gratis a toda Colombia, sin monto mínimo de compra. Los pedidos realizados hoy se despachan en 24 horas y la entrega tarda entre 1 y 3 días hábiles según tu ciudad."
+  - question: "¿Cómo funciona el pago contra entrega?"
+    answer: "Pagas en efectivo cuando recibes la crema en tu casa. No necesitas tarjeta ni hacer pagos por adelantado. Solo confirmas tu pedido por WhatsApp y pagas al momento de recibirlo."
+  - question: "¿Es seguro comprar en Protepiel?"
+    answer: "Sí. Como pagas contra entrega, no asumes ningún riesgo: solo pagas cuando tienes el producto en tus manos. Tus datos se usan únicamente para gestionar y confirmar tu pedido."
+  - question: "¿Cuánto cuesta la Crema Urea 40% y hay descuentos?"
+    answer: "Una unidad cuesta $69.990 COP con envío gratis. Si compras 2 unidades obtienes 20% de descuento y con 3 o más el descuento es del 30%. El pago siempre es contra entrega."
+  - question: "¿Cómo hago mi pedido?"
+    answer: "Pulsa cualquier botón de Comprar, elige la cantidad y completa tus datos en el formulario. Te contactamos por WhatsApp para confirmar la dirección y la fecha de entrega."
 ---
 
 <!-- ============================================================
@@ -250,6 +261,50 @@ hero: crema-urea-40-hidratacion-intensiva-piel-seca.avif
 </section>
 
 <!-- ============================================================
+     GARANTÍAS / SEGURIDAD
+     ============================================================ -->
+<section class="wrapper" style="padding-top:0" aria-label="Garantías de compra">
+  <ul class="garantias" role="list" style="list-style:none;padding:0;margin:0">
+    <li class="garantia" role="listitem">
+      <span class="garantia__icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+      </span>
+      <span>
+        <span class="garantia__title">Pago contra entrega</span>
+        <span class="garantia__text">Pagas en efectivo solo cuando recibes tu pedido.</span>
+      </span>
+    </li>
+    <li class="garantia" role="listitem">
+      <span class="garantia__icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </span>
+      <span>
+        <span class="garantia__title">Envío GRATIS</span>
+        <span class="garantia__text">A toda Colombia. Entrega en 1 a 3 días hábiles.</span>
+      </span>
+    </li>
+    <li class="garantia" role="listitem">
+      <span class="garantia__icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </span>
+      <span>
+        <span class="garantia__title">Compra 100% segura</span>
+        <span class="garantia__text">Sin pagos por adelantado. Tus datos están protegidos.</span>
+      </span>
+    </li>
+    <li class="garantia" role="listitem">
+      <span class="garantia__icon" aria-hidden="true">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      </span>
+      <span>
+        <span class="garantia__title">+127 clientes felices</span>
+        <span class="garantia__text">Calificación 4.8/5 en resultados reales.</span>
+      </span>
+    </li>
+  </ul>
+</section>
+
+<!-- ============================================================
      TESTIMONIOS
      ============================================================ -->
 <section class="wrapper seccion-completa seccion-completa--warm" aria-labelledby="testimonios-title">
@@ -331,6 +386,72 @@ hero: crema-urea-40-hidratacion-intensiva-piel-seca.avif
         </a>
       </div>
     </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================================================
+     URGENCIA (honesta + contador real opcional)
+     ============================================================ -->
+<section class="wrapper" style="padding-block:var(--space-6)" aria-label="Oferta vigente">
+  <div class="urgencia">
+    <div class="urgencia__msg">
+      <p class="urgencia__title">🔥 Envío GRATIS por tiempo limitado</p>
+      <p class="urgencia__sub">Aprovecha el envío sin costo a toda Colombia y paga contra entrega. Los pedidos de hoy se despachan en 24 horas.</p>
+    </div>
+    {% if site.promo_fin %}
+    <div class="cuenta-regresiva" data-fin="{{ site.promo_fin }}" role="timer" aria-label="Tiempo restante de la oferta">
+      <span class="cuenta-regresiva__caja"><span class="cuenta-regresiva__num" data-dias>00</span><span class="cuenta-regresiva__lbl">días</span></span>
+      <span class="cuenta-regresiva__caja"><span class="cuenta-regresiva__num" data-horas>00</span><span class="cuenta-regresiva__lbl">horas</span></span>
+      <span class="cuenta-regresiva__caja"><span class="cuenta-regresiva__num" data-min>00</span><span class="cuenta-regresiva__lbl">min</span></span>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ============================================================
+     CÓMO COMPRAR
+     ============================================================ -->
+<section class="wrapper" aria-labelledby="comprar-home-title">
+  <div class="flow" style="margin-bottom:var(--space-6)">
+    <p class="label-organic">Comprar es muy fácil</p>
+    <h2 id="comprar-home-title">Pide hoy y <em class="display-serif">paga cuando recibas</em></h2>
+  </div>
+  <ol class="pasos-compra" style="padding:0;list-style:none">
+    <li class="paso">
+      <p class="paso__title">Haz tu pedido</p>
+      <p class="paso__text">Elige la cantidad y completa tus datos en el formulario. Toma menos de un minuto.</p>
+    </li>
+    <li class="paso">
+      <p class="paso__title">Confirmamos por WhatsApp</p>
+      <p class="paso__text">Te escribimos para confirmar dirección y entrega. Sin pagos por adelantado.</p>
+    </li>
+    <li class="paso">
+      <p class="paso__title">Pagas al recibir</p>
+      <p class="paso__text">Recibes la crema en tu casa con envío gratis y pagas en efectivo contra entrega.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============================================================
+     FAQ — envío, pago y seguridad (intención transaccional)
+     ============================================================ -->
+<section class="wrapper seccion-completa seccion-completa--superficie" id="faqs-compra" aria-labelledby="faqs-home-title">
+  <div class="flow" style="margin-bottom:var(--space-8)">
+    <p class="label-organic">Envío y pago</p>
+    <h2 id="faqs-home-title">Preguntas sobre tu <em class="display-serif">compra</em></h2>
+  </div>
+  <div class="accordion" role="list">
+    {% for faq in page.faqs %}
+    <div class="accordion-item" role="listitem">
+      <button class="accordion-button" aria-expanded="false" aria-controls="cfaq-{{ forloop.index }}" id="cfaq-btn-{{ forloop.index }}">
+        {{ faq.question }}
+        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="accordion-content" id="cfaq-{{ forloop.index }}" role="region" aria-labelledby="cfaq-btn-{{ forloop.index }}">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>

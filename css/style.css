@@ -6,4 +6,5 @@ noindex: true
 {% include css/footer.css %}
 {% include css/home.css %}
 {% include css/producto.css %}
+{% include css/ventas.css %}
 {% include css/blog.css %}

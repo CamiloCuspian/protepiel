@@ -51,6 +51,30 @@
     });
   });
 
+  /* === CONTADOR REGRESIVO (solo si hay promo con fecha real) === */
+  const cuenta = document.querySelector('.cuenta-regresiva[data-fin]');
+  if (cuenta) {
+    const fin = new Date(cuenta.getAttribute('data-fin')).getTime();
+    const elDias  = cuenta.querySelector('[data-dias]');
+    const elHoras = cuenta.querySelector('[data-horas]');
+    const elMin   = cuenta.querySelector('[data-min]');
+    const pad = (n) => String(n).padStart(2, '0');
+
+    const tick = () => {
+      const diff = fin - Date.now();
+      if (isNaN(fin) || diff <= 0) { cuenta.style.display = 'none'; return false; }
+      const dias  = Math.floor(diff / 86400000);
+      const horas = Math.floor((diff % 86400000) / 3600000);
+      const min   = Math.floor((diff % 3600000) / 60000);
+      if (elDias)  elDias.textContent  = pad(dias);
+      if (elHoras) elHoras.textContent = pad(horas);
+      if (elMin)   elMin.textContent   = pad(min);
+      return true;
+    };
+
+    if (tick()) setInterval(tick, 30000);
+  }
+
   /* === LAZY ANIMATE (IntersectionObserver) === */
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => {

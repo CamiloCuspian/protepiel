@@ -4,7 +4,7 @@
 
 /* Hero blog */
 .blog-hero {
-  padding-top: 6rem;
+  padding-top: var(--top-clear);
   background: var(--primary);
   box-shadow: 0 0 0 100vmax var(--primary);
   clip-path: inset(0 -100vmax);
@@ -110,7 +110,7 @@
 }
 
 .post-header {
-  padding-top: 5.5rem;
+  padding-top: var(--top-clear);
   padding-bottom: var(--space-4);
 }
 

@@ -15,6 +15,43 @@
   transition: box-shadow 0.3s ease;
 }
 
+/* ===== BARRA DE ANUNCIO (confianza siempre visible) ===== */
+.anuncio-bar {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  height: var(--anuncio-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.anuncio-bar__track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  padding-inline: var(--space-3);
+}
+
+.anuncio-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.anuncio-bar__sep { opacity: 0.45; }
+
+.anuncio-bar strong { color: var(--secondary-container); font-weight: 700; }
+
+@media (max-width: 560px) {
+  .anuncio-bar__track { gap: var(--space-2); font-size: 0.7rem; }
+  .anuncio-bar__item--opcional { display: none; }
+}
+
 .header-nav.scrolled {
   box-shadow: var(--shadow-ambient);
 }
@@ -254,6 +291,43 @@
 
 .whatsapp-float svg { flex-shrink: 0; }
 
+/* ===== BARRA DE COMPRA FIJA (móvil) ===== */
+.buy-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 950;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  height: var(--buybar-h);
+  padding: 0.6rem var(--space-3);
+  background: rgba(250,248,244,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--outline-variant);
+  box-shadow: 0 -6px 24px rgba(26,74,53,0.10);
+}
+
+.buy-bar__info { display: flex; flex-direction: column; line-height: 1.15; }
+.buy-bar__price {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+.buy-bar__note {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+.buy-bar .boton { flex-shrink: 0; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav-links,
@@ -263,4 +337,88 @@
 
   .whatsapp-float .wa-text { display: none; }
   .whatsapp-float { padding: 0.75rem; }
+
+  /* Mostrar barra de compra fija y reservar espacio inferior */
+  .buy-bar { display: flex; }
+  body { padding-bottom: var(--buybar-h); }
+
+  /* Subir botones flotantes por encima de la barra de compra */
+  .floating-buttons { bottom: calc(var(--buybar-h) + var(--space-2)); }
+}
+
+/* ===== BANNER DE COOKIES ===== */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998; /* por debajo del menú móvil, por encima de la buy-bar */
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-3) var(--space-4);
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 -6px 24px rgba(13,43,31,0.28);
+}
+
+/* Cuando JS lo muestra usa display:flex inline; este flag respeta el layout */
+.cookie-consent[style*="flex"] { display: flex; }
+
+.cookie-consent__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #fff;
+  max-width: 60ch;
+}
+
+.cookie-consent__link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cookie-consent__link:hover { color: var(--secondary-container); }
+
+.cookie-consent__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.cookie-consent__btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cookie-consent__btn--ghost {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.7);
+  color: #fff;
+}
+.cookie-consent__btn--ghost:hover { background: rgba(255,255,255,0.12); }
+
+.cookie-consent__btn--solid {
+  background: #fff;
+  border: 1.5px solid #fff;
+  color: var(--primary);
+}
+.cookie-consent__btn--solid:hover { background: var(--secondary-container); border-color: var(--secondary-container); }
+
+/* En móvil la barra de compra está fija abajo: el banner de cookies se apila
+   ENCIMA de ella para que AMBOS sean visibles a la vez. Va después del bloque
+   base para ganar en orden de cascada. */
+@media (max-width: 768px) {
+  .cookie-consent { bottom: var(--buybar-h); }
+}
+
+@media (max-width: 560px) {
+  .cookie-consent { padding: var(--space-3); gap: var(--space-2); }
+  .cookie-consent__text { font-size: 0.82rem; }
 }
