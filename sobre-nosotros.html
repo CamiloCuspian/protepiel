@@ -56,7 +56,9 @@ intro: "Nacimos de la necesidad de tener acceso a productos efectivos y naturale
     <h2 id="cta-nos-title" class="cta-final__title">¿Tienes preguntas? <em>Escríbenos.</em></h2>
     <p class="cta-final__sub">Nuestro equipo responde en menos de 2 horas por WhatsApp.</p>
     <a href="{{ site.whatsapp }}" class="boton boton_cta" target="_blank" rel="noopener noreferrer"
-       aria-label="Contactar Protepiel por WhatsApp">
+       aria-label="Contactar Protepiel por WhatsApp"
+       data-whatsapp-action="true"
+       onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_click',click_source:'sobre_nosotros',page_path:window.location.pathname});">
       💬 Escribir por WhatsApp
     </a>
   </div>

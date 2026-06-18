@@ -23,6 +23,8 @@ faqs:
     answer: "Aplica una capa generosa después de bañarte, con la piel aún húmeda. Masajea durante 2 a 3 minutos en callos y talones. Para grietas profundas, cubre con medias de algodón y déjala actuar toda la noche. Usa una o dos veces al día. Los primeros resultados se notan en 5 a 7 días."
 ---
 
+<p class="speakable-summary"><strong>En resumen:</strong> La urea al 40% es el tratamiento estándar en dermatología para callosidades, talones agrietados y piel engrosada en los pies. Actúa como queratolítico: disuelve la capa de células muertas que forman los callos y las durezas, mientras hidrata en profundidad. Con el protocolo nocturno de oclusión con medias de algodón, los resultados se ven en 5 a 10 días.</p>
+
 Los pies son la parte del cuerpo que más necesita una fórmula potente. La piel plantar tiene entre 1,5 y 4 mm de grosor — comparado con los 0,1 mm del rostro. Una crema hidratante común no penetra lo suficiente para tratar callosidades reales.
 
 La urea al 40% es el estándar dermatológico para este problema. Aquí te explicamos todo lo que necesitas saber.
@@ -77,4 +79,4 @@ La urea al 40% está contraindicada en piel con heridas abiertas, piel infectada
 
 - [Cómo Usar la Crema Urea al 40%: Guía Paso a Paso](/blog/como-usar-crema-urea-40/) — frecuencia, técnica y qué esperar semana a semana
 - [Urea para Piel Seca y Grietas: Guía Completa](/blog/urea-piel-seca-grietas/) — tratamiento de grietas en talones con el protocolo nocturno
-- [Ver Crema Urea 40% de Protepiel](/crema-urea-40/) — con envío gratis y pago contra entrega a toda Colombia
+- [Urea al 10%, 20% o 40%: ¿Cuál Concentración Necesitas?](/blog/urea-10-vs-20-vs-40/) — comparativa completa para elegir la concentración correcta según tu problema

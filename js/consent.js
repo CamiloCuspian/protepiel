@@ -7,6 +7,17 @@
   var acceptBtn = document.getElementById('cookie-accept');
   var rejectBtn = document.getElementById('cookie-reject');
 
+  /* ── Microsoft Clarity — solo carga si el usuario aceptó cookies ── */
+  function loadClarity() {
+    if (window._clarityLoaded) return;
+    window._clarityLoaded = true;
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,'clarity','script','wyt70s96q3');
+  }
+
   function updateConsent(status) {
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
@@ -31,6 +42,7 @@
   function handleConsent(status) {
     try { localStorage.setItem(STORAGE_KEY, status); } catch (e) {}
     updateConsent(status);
+    if (status === 'granted') loadClarity();
     hideBanner();
   }
 
@@ -39,6 +51,7 @@
 
   if (saved) {
     updateConsent(saved);
+    if (saved === 'granted') loadClarity();
   } else {
     showBanner();
   }
