@@ -405,3 +405,313 @@
 
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ===== FICHA HERO ===== */
+
+/* ===== GRID PRINCIPAL ===== */
+.ficha-hero {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+/* ===== IMAGEN CON BADGE SUPERPUESTO ===== */
+.ficha-hero__img {
+  position: relative;
+}
+
+.ficha-hero__img img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-deep);
+}
+
+.ficha-badge-bestseller {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  white-space: nowrap;
+  max-width: calc(100% - var(--space-6));
+  z-index: 1;
+}
+
+/* ===== COLUMNA DE TRUST BADGES ===== */
+.ficha-hero__badges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Override .garantia a layout vertical centrado dentro de la columna */
+.ficha-hero__badges .garantia {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ficha-hero__badges .garantia > span:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== BLOQUE DE INFORMACIÓN ===== */
+.ficha-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Liberar max-width del h1 global (18ch) dentro de la ficha */
+.ficha-info h1 {
+  max-width: unset;
+}
+
+/* ===== RATING ===== */
+.ficha-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ficha-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--accent);
+}
+
+/* ===== PILLS DE CARACTERÍSTICAS ===== */
+.ficha-pills {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Variante neutral del badge (para pills de características) */
+.badge--neutral {
+  background: var(--surface-container);
+  color: var(--on-surface);
+}
+
+/* ===== PRECIO ===== */
+.ficha-price {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.ficha-price__old {
+  text-decoration: line-through;
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+.ficha-price__current {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* ===== LISTA DE BENEFICIOS ===== */
+.ficha-benefits {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ficha-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  font-family: var(--font-body);
+}
+
+.ficha-benefits__check {
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ===== CTA A ANCHO COMPLETO ===== */
+.ficha-cta {
+  width: 100%;
+  max-width: unset; /* override .boton { max-width: max-content } */
+  justify-content: center;
+  font-size: 1.05rem;
+  padding: 1rem 2rem;
+  animation: pulse-green 2.5s ease-in-out infinite;
+}
+
+.ficha-cta:hover { animation: none; }
+
+/* ===== TRUST LINE BAJO EL CTA ===== */
+.ficha-trust-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: 0.82rem;
+  color: var(--on-surface-variant);
+  text-align: center;
+  font-family: var(--font-body);
+  max-width: unset; /* override p { max-width: 65ch } */
+}
+
+/* ===== RESPONSIVE FICHA HERO ===== */
+@media (max-width: 768px) {
+  .ficha-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ficha-hero__badges {
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-2);
+    padding-bottom: var(--space-1);
+  }
+
+  .ficha-hero__badges .garantia {
+    flex: 0 0 auto;
+    min-width: 110px;
+  }
+
+  /* Ocultar texto largo en móvil; solo icono + título */
+  .ficha-hero__badges .garantia__text {
+    display: none;
+  }
+}
+
+/* ===== GALERÍA DE RESULTADOS ===== */
+.galeria-card__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.galeria-card__img img {
+  width: 100%;
+  heigh
+.galeria-card__tag {
+  position: absolute;
+  bottom: var(--space-1);
+  right: var(--space-1);
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+}
+
+.galeria-card__info { padding-top: var(--space-3); }
+
+.galeria-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-body);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.galeria-card__text {
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  max-width: unset;
+}
+
+/* ===== TESTIMONIOS ===== */
+.testimonio-card {
+  background: var(--surface-container);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.testimonio-card__cita {
+  font-size: 0.92rem;
+  color: var(--on-surface);
+  line-height: 1.65;
+  font-style: italic;
+  margin-block: 0.5rem;
+  max-width: unset;
+}
+
+.testimonio-card__autor {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  font-family: var(--font-body);
+  font-style: normal;
+}
+
+/* ===== ZONA POR ZONA ===== */
+.zona-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.zona-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.zona-card__body { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.zona-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+.zona-card__text {
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+  line-height: 1.65;
+  max-width: unset;
+}
+
+.zona-card__list {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.zona-card__list li {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.zona-card__list li {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
